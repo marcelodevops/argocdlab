@@ -1,6 +1,11 @@
 server:
   standalone:
     enabled: true
+  ingress:
+    enabled: true
+    ingressClassName: nginx
+    hosts:
+      - host: vault.localhost
 
 ui:
   enabled: true
