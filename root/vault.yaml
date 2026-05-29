@@ -17,7 +17,7 @@ spec:
 
       helm:
         valueFiles:
-          - $values/platform/vault/values.yaml
+          - platform/vault/values.yaml
 
     # Your GitOps repo containing values.yaml
    #- repoURL: https://github.com/marcelodevops/gitops.git
