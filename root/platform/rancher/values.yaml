@@ -1,0 +1,5 @@
+hostname: rancher.localhost
+
+replicas: 1
+
+bootstrapPassword: admin

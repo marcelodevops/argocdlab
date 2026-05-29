@@ -1,0 +1,18 @@
+homelab-gitops/
+├── applicationsets/
+│   ├── infrastructure.yaml
+│   └── apps.yaml
+│
+├── infrastructure/
+│   ├── ingress-nginx/
+│   ├── rancher/
+│   ├── opentelemetry/
+│   ├── monitoring/
+│   └── elastic/
+│
+├── apps/
+│   ├── demo-api/
+│   └── frontend/
+│
+└── clusters/
+    └── local-kind/
