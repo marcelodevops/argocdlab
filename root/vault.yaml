@@ -20,9 +20,9 @@ spec:
           - $values/platform/vault/values.yaml
 
     # Your GitOps repo containing values.yaml
-    - repoURL: https://github.com/marcelodevops/gitops.git
-      targetRevision: HEAD
-      ref: va
+   #- repoURL: https://github.com/marcelodevops/gitops.git
+   #  targetRevision: HEAD
+   #  ref: values
 
   destination:
     server: https://kubernetes.default.svc
