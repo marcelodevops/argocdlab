@@ -17,12 +17,12 @@ spec:
 
       helm:
         valueFiles:
-          - platform/vault/values.yaml
+          - $values/root/platform/vault/values.yaml
 
     # Your GitOps repo containing values.yaml
-   #- repoURL: https://github.com/marcelodevops/gitops.git
-   #  targetRevision: HEAD
-   #  ref: values
+    - repoURL: https://github.com/marcelodevops/argocdlab.git
+      targetRevision: HEAD
+      ref: values
 
   destination:
     server: https://kubernetes.default.svc
