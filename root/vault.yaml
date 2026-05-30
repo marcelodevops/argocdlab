@@ -24,9 +24,9 @@ spec:
       targetRevision: HEAD
       ref: values
     # Git manifests
-    - repoURL: https://github.com/marcelodevops/argocdlab.git
-      targetRevision: main
-      path: root/platform/vault/manifests
+#    - repoURL: https://github.com/marcelodevops/argocdlab.git
+#      targetRevision: main
+#      path: root/platform/vault/manifests
 
   destination:
     server: https://kubernetes.default.svc
