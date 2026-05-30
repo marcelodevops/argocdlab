@@ -1,0 +1,14 @@
+adminPassword: "change-me"
+
+service:
+  type: ClusterIP
+
+persistence:
+  enabled: true
+  size: 10Gi
+
+ingress:
+  enabled: true
+  ingressClassName: nginx
+  hosts:
+    - grafana.localhost

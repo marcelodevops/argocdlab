@@ -1,0 +1,42 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+
+metadata:
+  name: grafana
+  namespace: grafana
+
+spec:
+  project: default
+
+  sources:
+
+    # Grafana Helm chart
+    - repoURL: https://grafana.github.io/helm-charts
+      chart: grafana
+      targetRevision: 9.2.10
+
+      helm:
+        valueFiles:
+          - $values/root/platform/grafana/values.yaml
+
+    # GitOps repo containing values.yaml
+    - repoURL: https://github.com/marcelodevops/argocdlab.git
+      targetRevision: main
+      ref: values
+
+    # Git manifests
+#    - repoURL: https://github.com/marcelodevops/argocdlab.git
+#      targetRevision: main
+#      path: root/platform/grafana/manifests
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: grafana
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+
+    syncOptions:
+      - CreateNamespace=true
